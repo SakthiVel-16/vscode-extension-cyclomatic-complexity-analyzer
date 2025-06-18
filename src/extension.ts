@@ -85,7 +85,7 @@ async function performAnalysis(forcePanelCreation: boolean = false) {
             return; // Exit if language is not supported
     }
 
-    const API_URL = 'http://localhost:8080/api/complexity/analyze';
+    const API_URL = 'https://cyclomatic-complexity-analyzer-z1fm.onrender.com/api/complexity/analyze';
 
     try {
         // Provide visual feedback for analysis, but avoid spamming messages during typing

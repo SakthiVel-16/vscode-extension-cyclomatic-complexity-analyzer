@@ -1,71 +1,89 @@
-# sakthivel-cyclomatic-complexity-analyzer README
+# Cyclomatic Complexity Analyzer for VS Code
 
-This is the README for your extension "sakthivel-cyclomatic-complexity-analyzer". After writing up a brief description, we recommend including the following sections.
+## 🚀 Overview
 
-## Features
+The **Cyclomatic Complexity Analyzer** is a Visual Studio Code extension that helps developers understand and improve the quality of their code by calculating its Cyclomatic Complexity. This metric quantifies the number of linearly independent paths through a program's source code, serving as a comprehensive metric for the structural complexity of a program.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+**Why is Cyclomatic Complexity important?**
 
-For example if there is an image subfolder under your extension project workspace:
+- **Identify complex code:** Pinpoint functions or methods that are hard to understand and maintain.
+- **Reduce bugs:** Highly complex code often leads to more defects.
+- **Improve testability:** Complex code is harder to test thoroughly.
+- **Refactoring guidance:** Guides you on where to focus your refactoring efforts.
 
-\!\[feature X\]\(images/feature-x.png\)
+Our extension seamlessly integrates into your VS Code workflow, providing instant feedback for your Java, JavaScript, and Python code.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## ✨ Features
 
-## Requirements
+- **Real-time Analysis:** Get complexity metrics as you code.
+- **Multi-Language Support:** Analyzes Java, JavaScript, and Python files.
+- **Dedicated Webview Panel:** View detailed complexity breakdown for each method/function in a clean, interactive panel.
+- **Cloud-Powered:** Leverages a robust Spring Boot backend for accurate and efficient analysis, ensuring your editor remains performant.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 💡 How It Works
 
-## Extension Settings
+The **Cyclomatic Complexity Analyzer** operates on a client-server architecture:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1.  **Client-Side (VS Code Extension):** When you open or save a supported file (Java, JavaScript, Python), your VS Code extension securely sends the content of that file to our dedicated backend service.
+2.  **Server-Side (Spring Boot Backend on Render.com):** Our highly optimized backend, hosted on Render.com, receives your code, performs the complex cyclomatic complexity calculations, and sends the results back to your VS Code extension.
+3.  **Display Results:** The extension then beautifully presents these results in a dedicated "Cyclomatic Complexity" panel within your VS Code sidebar, offering insights into your code's structure.
 
-For example:
+This architecture ensures that the intensive computation doesn't slow down your local VS Code environment, providing a smooth development experience.
 
-This extension contributes the following settings:
+## 🚀 Getting Started
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Follow these simple steps to install and start using the Cyclomatic Complexity Analyzer:
 
-## Known Issues
+### 1. Installation
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1.  Open Visual Studio Code.
+2.  Go to the Extensions view by clicking on the Square icon on the Sidebar or pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
+3.  Search for "Cyclomatic Complexity Analyzer".
+4.  Click the "Install" button.
 
-## Release Notes
+### 2. Usage
 
-Users appreciate release notes as you update your extension.
+Once installed, the extension works largely automatically!
 
-### 1.0.0
+1.  **Open a Supported File:** Open any `.java`, `.js`, or `.py` file in your VS Code editor.
+2.  **View Results:** A new panel titled "Cyclomatic Complexity" will appear in your VS Code sidebar (you might need to enable it if it's hidden under the ellipsis `...` menu in the sidebar). This panel will automatically update with the complexity metrics for the active file.
+3.  **Explore Details:** The panel will list each function or method found in your file along with its calculated cyclomatic complexity score.
 
-Initial release of ...
+    - **Screenshot:** [Add a clear screenshot showing the extension's panel displaying complexity results for a sample code file.]
+    - _Example: A Java/JS/Python file open with the sidebar panel showing function names and their complexity scores._
 
-### 1.0.1
+### Important Notes:
 
-Fixed issue #.
+- **Internet Connection Required:** This extension requires an active internet connection to communicate with the analysis backend.
+- **Cold Start:** As the backend is hosted on a free tier, there might be a slight delay (a few seconds) for the very first analysis request after a period of inactivity (known as "cold start"). Subsequent analyses will be much faster.
 
-### 1.1.0
-
-Added features X, Y, and Z.
+## 📸 Screenshots
 
 ---
 
-## Following extension guidelines
+**Screenshot 1: The Cyclomatic Complexity Panel in Action**
+![Cyclomatic Complexity Panel](https://raw.githubusercontent.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer/main/images/image.png)
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+_Description: A view of the extension's dedicated sidebar panel, showing complexity scores for functions within a sample code file._
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+**Screenshot 2: How to Access the Panel**
 
-## Working with Markdown
+![Cyclomatic Complexity Panel](https://raw.githubusercontent.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer/main/images/image-1.png)
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+_Description: Illustrates how to find and open the "Cyclomatic Complexity" panel if it's not immediately visible._
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🤝 Contributing
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+We welcome contributions! If you have suggestions, bug reports, or want to contribute code, please visit our GitHub repository:
 
-**Enjoy!**
+- **Extension Repository:** [https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer](https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer)
+
+- **Backend Repository:** [https://github.com/SakthiVel-16/cyclomatic-complexity-analyzer](https://github.com/SakthiVel-16/cyclomatic-complexity-analyzer)
+
+## 📄 License
+
+This extension is released under the [MIT License](https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer/blob/main/LICENSE).
+
+---
