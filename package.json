@@ -3,7 +3,9 @@
   "displayName": "Cyclomatic Complexity Analyzer",
   "description": "Real-time cyclomatic complexity analysis for Java, JavaScript, and Python",
   "version": "0.0.1",
-  
+  "publisher": "SakthiVel-16",
+  "icon": "images/icon.png", 
+  "license": "MIT", 
   "engines": {
     "vscode": "^1.101.0"
   },
