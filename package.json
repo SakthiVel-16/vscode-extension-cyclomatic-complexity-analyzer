@@ -3,6 +3,7 @@
   "displayName": "Cyclomatic Complexity Analyzer",
   "description": "Real-time cyclomatic complexity analysis for Java, JavaScript, and Python",
   "version": "0.0.1",
+  
   "engines": {
     "vscode": "^1.101.0"
   },
@@ -51,5 +52,13 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer.git"
+  },
+  "homepage": "https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer#readme",
+    "bugs": {
+        "url": "https://github.com/SakthiVel-16/vscode-extension-cyclomatic-complexity-analyzer/issues"
+    }
 }
